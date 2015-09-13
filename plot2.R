@@ -1,0 +1,5 @@
+png("plot2.png", width=480, height=480)
+source("load.R")
+times <- strptime(paste(newdf$Date,  newdf$Time, " "), "%d/%m/%Y %H:%M:%S")
+plot(times, newdf$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+dev.off()
